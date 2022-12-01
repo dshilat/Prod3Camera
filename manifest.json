@@ -1,0 +1,23 @@
+﻿{
+  "id": "index.html",
+  "name": "הפרויקטים של טלמ",
+  "description": "אתר המציג את כל הפרויקטים שלנו",
+  "short_name": "TelemProjects",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#302E8F",
+  "theme_color": "#549D9D",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

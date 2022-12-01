@@ -1,0 +1,13 @@
+
+.card-img-top{
+  height: 150px;
+}
+.card-body h3{
+  margin-bottom: 20px;
+  font-size: 14pt;
+  text-align: center;
+}
+
+video, img, canvas{
+    max-width: 100%;
+}

@@ -1,0 +1,99 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#549D9D" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Expo" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <title>תכנות 3 - צילום ושיתוף</title>
+
+    <!--favicon-->
+
+    <link href="splashscreens/iphone5_splash.png"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphone6_splash.png"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphoneplus_splash.png"
+        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphonex_splash.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphonexr_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphonexsmax_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+    <link href="splashscreens/ipad_splash.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="splashscreens/ipadpro1_splash.png"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="splashscreens/ipadpro3_splash.png"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="splashscreens/ipadpro2_splash.png"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- manifest.json file -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body class="fullscreen">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col col-lg-4">
+                <!-- כפתור התקנה -->
+                <!-- די נאן מבטל את הצגת הכפתור כברירת מחדל -->
+                <button id="install-btn" class="d-none btn btn-primary w-100 my-3" onclick="installApp()">
+                    התקנה
+                </button>
+                <!-- וידאו -->
+                <div class="camera position-relative d-flex justify-content-center mb-3">
+                    <video id="player" class="" autoplay muted playsinline></video>
+                </div>
+
+                <!-- תמונה -->
+                <!-- כפתור בעזרתו נצלם תמונה -->
+                <!-- בלחיצה עושים "צילום מסך" לוידאו ליצירת תמונה -->
+                <button id="startbutton" onclick="doScreenshot()" class="btn btn-primary w-100 my-3">צילום 
+                    תמונה</button>
+
+                <!-- הצגת התמונה שצולמה -->
+                <canvas id="canvas" class="d-none"></canvas>
+                <div id="photo-wrapper" class="output d-none">
+                    <img id="photo">
+                </div>
+
+                <!-- שיתוף -->
+                <button onclick="share()" class="btn btn-info w-100">שיתוף</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
